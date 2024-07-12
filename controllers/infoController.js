@@ -5,7 +5,7 @@ export default class infoController{
         let connection;
         try{
             connection=await mysql.createConnection(db)
-            const [result]=await connection.execute('SELECT * FROM Palabras WHERE Id_palabra=2')
+            const [result]=await connection.execute('SELECT image_palabra FROM Palabras WHERE palabra = a')
             console.log(result)
             res.json(result)
         }
