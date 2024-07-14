@@ -1,7 +1,8 @@
 const db={
-    host:'localhost',
-    port:3306,
+    host:'monorail.proxy.rlwy.net',
+    port:46706,
     user:'root',
-    password:'',
-    database:'senassist',
+    password:'EUPKYPSWPqytoTXoKlIsrjxbFmQZtqyf',
+    database:'railway',
 }
+export default db
