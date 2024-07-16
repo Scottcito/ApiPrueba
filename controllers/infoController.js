@@ -3,12 +3,11 @@ import db from '../config/database.js';
 export default class infoController{
     static async index(req,res){
         let textoo=texto
-        console.log(texto)
         let connection;
         try{
+            console.log(textoo)
             connection=await mysql.createConnection(db)
             const [result]=await connection.execute('SELECT imagen_palabra FROM Palabras WHERE palabra ="a"')
-            console.log(textoo)
             console.log(result)
             res.json(result)
         }
