@@ -2,9 +2,9 @@ import mysql from 'mysql2/promise'
 import db from '../config/database.js';
 export default class infoController{
     static async index(req,res){
-        let textoo=texto
         let connection;
         try{
+            const {textoo}= req.texto
             console.log(textoo)
             connection=await mysql.createConnection(db)
             const [result]=await connection.execute('SELECT imagen_palabra FROM Palabras WHERE palabra ="a"')
