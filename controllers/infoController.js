@@ -10,6 +10,7 @@ export default class infoController{
             const [result]=await connection.execute('SELECT imagen_palabra FROM Palabras WHERE palabra ="a"')
             console.log(result)
             res.json(result)
+            res.json(textoo)
         }
         catch(error){
             res.status(500).json({'error :':error.message})
