@@ -5,12 +5,11 @@ export default class infoController{
         let connection;
         try{
             const texto= req.body;
-            console.log(texto)
             connection=await mysql.createConnection(db)
             const [result]=await connection.execute('SELECT imagen_palabra FROM Palabras WHERE palabra = ?',[texto])
             console.log(result)
             res.json(result)
-            res.json(texto)
+            console.log(texto)
         }
         catch(error){
             res.status(500).json({'error :':error.message})
