@@ -4,7 +4,7 @@ export default class infoController{
     static async index(req,res){
         let connection;
         try{
-            const texto= req.body.palabra ||"a";
+            const texto= req.body.palabra;
             connection=await mysql.createConnection(db)
             const [result]=await connection.execute('SELECT imagen_palabra FROM Palabras WHERE palabra = ?',[texto])
             console.log(result)
