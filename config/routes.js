@@ -4,5 +4,6 @@ const router=new Router()
 
 // Define las rutas y asigna los controladores
 router.post('/info', infoController.index); 
+router.get('/info', infoController.index); 
 
 export default router;
